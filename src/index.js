@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { scheduleJob } = require('node-schedule');
 const client = new Discord.Client();
-const dotenv = requir('dotenv');
+const dotenv = require('dotenv');
 dotenv.config();
 
 client.on('ready', () => {
