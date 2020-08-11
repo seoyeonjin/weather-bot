@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { scheduleJob } = require('node-schedule');
+const schedule = require('node-schedule');
 const client = new Discord.Client();
 const dotenv = require('dotenv');
 dotenv.config();
@@ -12,8 +12,7 @@ const everySecond = "* * * * * *";
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
-     scheduleJob.scheduleJob(everySecond, function(){msg.reply('Pong!');})
-     msg.reply('Pong!');
+      schedule.scheduleJob(everySecond, function(){msg.reply('Pong!');})
   }
 });
 
